@@ -1,4 +1,4 @@
-# JavaScript 30
+#  JavaScript 30
 
 ## JavaScript Drum Kit
 
@@ -13,22 +13,22 @@
     //補充:如果該function沒有參數要傳，要帶空括號如下
     var func3 = () => console.log('Hi');
 
->####transitionend
+>#### transitionend
 
     addEventLisenter("transitionend",function(){}) 
     //transitionend為其中一項事件
->####audio
+>#### audio
 
-#####HTML語法
+##### HTML語法
 
     <audio src=””></audio>
->####audio.play()
+>#### audio.play()
 
-#####JavaScript語法
+##### JavaScript語法
 
     element.play()//進行播放
     element.currentTime//指定播放間隔秒數
->####template (``,${})
+>#### template (``,${})
 
 用``包住字串，利用`${}`來包變數
 
@@ -40,7 +40,7 @@
     var str = `<div data-key="${key}">
              <button>click me</button>
              </div>`;
->####Array.from
+>#### Array.from
 
 
     //Array.from 是一個將一個物件或是字串轉為陣列格式的語法
@@ -59,24 +59,24 @@ nodeList很像陣列，但無`array.prototype`上的方法。
     testArray.push('add'); // <-- 轉為陣列就可以了
 
 -----------------------------------------------
-##CSS + JS CLOCK
+## CSS + JS CLOCK
 
 2018/07/04
 
->####transform
+>#### transform
 
     transform-origin: 100%;//將原點轉移到最右邊
     transform: rotate(90deg);
 
->#####transform-origin
+>##### transform-origin
 變形的軸心，預設為物件的中心點，
 在這個範例中，設定為100%(right)可以使其從時鐘面的中心點開始旋轉。
 
->#####transform:rotate()
+>##### transform:rotate()
 旋轉物件，數值後方要加上角度`deg`，
 可超過360度，正值為順時針轉，負值為逆時針旋轉。
 
->#####transition
+>##### transition
     transition: all 0.05s;//轉場畫面的位置與秒數
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 
@@ -99,7 +99,7 @@ nodeList很像陣列，但無`array.prototype`上的方法。
 | cubic-bezier（n，n，n，n） | 在cubic-bezier 函數中定義自己的值。可能的值是0 至1 之間的數值。                    |
 
 
->####Date()
+>#### Date()
 
 JavaScript語法
 時間函式，需搭配new來取得時間函數
@@ -111,7 +111,7 @@ JavaScript語法
     var seconds = now.getSeconds();//用get擷取Date中的seconds
 
 
->####setInterval
+>#### setInterval
 
 JavsScript語法
 定時器，有兩個參數`setInterval(function, time)`
@@ -123,23 +123,23 @@ JavsScript語法
     seconds
 
 ----------
-##CSS-Variables
+## CSS-Variables
 
 2018/07/04
 
->####:root
+>#### :root
 
 `:root` 選擇器匹配文檔根元素。
 在HTML 中，根元素始終是html 元素。
 
->####dataset
+>#### dataset
 
 用`dataset`可以取出對象的`data-*`屬性，也等同於`getAttribute`
 
     <div id="test" data-no="123"></div>
-    document.querySelector("#test").dataset.no // 輸出123
-    document.querySelector("#test").getAttribute("data-no"); // 輸出123
->####style.setProperty()
+    document.querySelector("# test").dataset.no // 輸出123
+    document.querySelector("# test").getAttribute("data-no"); // 輸出123
+>#### style.setProperty()
 
 等同於style.PropertyName
 
@@ -149,12 +149,12 @@ JavsScript語法
 
 在實際應用中，前者的做法會很方便帶參數進去。
 
-##Array-Cardio-Day-1
+## Array-Cardio-Day-1
 
 2019/07/04
 
 
->####Array.filter()
+>#### Array.filter()
 
 filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，很適合用在搜尋符合條件的資料。
 
@@ -167,7 +167,7 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
         }
 
 
->####Array.map()
+>#### Array.map()
 
 使用 map() 時他需要回傳一個值，他會透過函式內所回傳的值組合成一個陣列。
 
@@ -202,14 +202,14 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
       }
     });
     console.log(mapEat);          // ["鍋燒意麵 好吃", "炒麵 好吃", "蘿蔔泥 不好吃", "蘿蔔泥 不好吃"]
->####Array.sort()
+>#### Array.sort()
 
 更改陣列順序
 
     var birthdate = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 
 
->####Array.reduce()
+>#### Array.reduce()
 
     //Array.reduce(total,value,index, array)
     var live = inventors.reduce((total, inventor) => { return total + (inventor.passed - inventor.year) }, 0);//0為設定total的起始值
@@ -228,7 +228,7 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
 首先
 接著做一個判斷來決定建立物件內容或著使已建立內容累加總數!
 
->####.split
+>#### .split
 
 將陣列中以某個字元為基準切開
 
@@ -240,11 +240,11 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
     })
 
 
-##Flex Panels Image Gallery
+## Flex Panels Image Gallery
 
 2019/07/04
 
->####Flex()
+>#### Flex()
 
 display: flex
 把該容器設定為flex模式，容器內的子元素都成為一個flex
@@ -264,11 +264,11 @@ includes()
     }
 
 
-##Ajax Type Ahead(未學)
+## Ajax Type Ahead(未學)
 
 2019/07/05
 
->####RegExp()
+>#### RegExp()
 
 Regular Expression
 
@@ -295,11 +295,11 @@ Regular Expression
     [] //符合[]內的任意一個選項. [abd]等於a or b or d
     [0-9] //-如果不是在開頭,就算是範圍不是字元.
     [^0-5]{3}//此時^為反向的意思.ex:選擇三個字元內有0-5以外的 
-##Array Cardio Day 2
+## Array Cardio Day 2
 
 2019/07/07
 
->####.every()
+>#### .every()
 
 every() 可以檢查所有的陣列是否符合條件，這僅會回傳一個值 true or false，可以用來檢查陣列中的內容是否符合特定條件。every() 需完全符合
 
@@ -308,7 +308,7 @@ every() 可以檢查所有的陣列是否符合條件，這僅會回傳一個值
       return item.age > 10 });// false: 只要有部分不符合，則為 false
     var ans2 = array.every(function(item, index, array){
       return item.age < 25 });// true: 全部 age 都小於 25
->####.some()
+>#### .some()
 
 some() 與 every() 非常接近，都是回傳 true or false，差異僅在 every() 需完全符合，some() 僅需要部分符合。
 
@@ -324,7 +324,7 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
     });// false: 全部都不符合則為 false
 
 
->####.splice()
+>#### .splice()
 
     //Array.splice(index,howmany,item1,...,itemN)
     var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -334,7 +334,7 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
     animals.splice(1, 0,"dog");//output:['ant',"dog",'bison', 'camel', 'duck', 'elephant']
     animals.splice(1, 2,"dog","cat");//output:['ant',"dog","cat", 'duck', 'elephant']
     animals.splice(1, 3,"dog");//output:['ant',"dog", 'elephant']
->####.slice()
+>#### .slice()
 
 `slice()` 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
 `slice()`若沒指定開始與結束位置則複製原陣列
@@ -344,7 +344,7 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
     animals.slice(2);//output:["camel", "duck", "elephant"]
     animals.slice(2, 4);//output:["camel", "duck"]
     animals.slice(1, 5);//output:["bison", "camel", "duck", "elephant"]
->####.find
+>#### .find
 
 find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次為 true 的值。
 
@@ -360,18 +360,18 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     });
     console.log(findLike);           // 雖然答案有兩個，但只會回傳第一個 Bobo 物件
 
->####.findIndex() 
+>#### .findIndex() 
 
 與find() 很像，但是是回傳index的位置。
 
     var index = comments.findIndex(comment => comment.id === 823423);
 
 
-##Fun with HTML5 Canvas
+## Fun with HTML5 Canvas
 
 2019/07/07
 
->####Canvas
+>#### Canvas
 
 `CanvasRenderingContext2D.canvas` 屬性是 Canvas API 的一部分，是對與給定上下文關聯的`HTMLCanvasElement`對象的只讀引用。如果没有 `<canvas>` 元素與之對應，對象值為`null`。
 
@@ -382,7 +382,7 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     ctx.canvas // HTMLCanvasElement
->####.lineJoin()
+>#### .lineJoin()
 
 轉折處的樣式,`miter`為預設.
 
@@ -392,7 +392,7 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
 2. “bevel"三角形為底 
 3. "miter”菱形為底
 
->####.lineCap()
+>#### .lineCap()
 
 起始與結尾的樣式,`butt`為預設.
 
@@ -402,37 +402,37 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
 2. ”round”圓形 
 3.”square”方形
 
->####畫線設置
+>#### 畫線設置
 
     //畫線設置
     ctx.beginPath();//設置一個新的路徑
     ctx.moveTo(50,50);//將一個新的子路徑的起始點移動到(x,y)坐標的方法
     ctx.lineTo(200, 50);//使用直線連接子路徑的終點到(x,y)座標的方法(但不會畫線)
     ctx.stroke();//繪製當前或已經存在的路徑的方法
->####.strokeStyle
+>#### .strokeStyle
 
     ctx.strokeStyle = color;
     ctx.strokeStyle = gradient;
     ctx.strokeStyle = pattern;
->####hsl
+>#### hsl
 
     hsl(hue(色調deg), saturation(飽和度%), lightness(亮度%))
 
-#####hue
+##### hue
 為調色盤上的角度,範圍為0-360. 0為紅色, 120為綠色, 240為藍色.
 
-#####saturation
+##### saturation
 用百分比%表示. 0%為灰階, 100%為全彩.
 
-#####lightness
+##### lightness
 用百分比%表示. 0%為黑色, 100%為白色.
 
 
-##14 Must Know Dev Tools Tricks
+## 14 Must Know Dev Tools Tricks
 
 2019/07/08
 
->####console
+>#### console
 
     console.log()
     console.dir()//顯示屬性
@@ -452,76 +452,76 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     console.time()//計時器，開始計時間，與timeEnd()一起使用，用於算出一個操作所花費的準確時間。
     console.timeEnd()//計時結束
     console.table()//以表格方式顯示數據
-##Hold Shift to Check Multiple Checkboxes
+## Hold Shift to Check Multiple Checkboxes
 
 2019/07/08
 
->####.shiftKey
+>#### .shiftKey
 
 偵測shiftKey是否使用中, 然後回傳true or false
 
->####.checked
+>#### .checked
 
 偵測checkbox是否被選取, 然後回傳true or fals
 
-##Custom HTML5 Video Player
+## Custom HTML5 Video Player
 
 2019/07/08
 
->####video
+>#### video
 
-#####.play
+##### .play
 播放
 
-#####.pause
+##### .pause
 暫停
 
-#####.paused 
+##### .paused 
 video暫停時為true 播放時為 false
 
-#####.currentTime
+##### .currentTime
 正在播放的時間點
 
-#####.duration
+##### .duration
 影片總長
 
-#####.volume
+##### .volume
 聲音
 
-#####.playbackRate
+##### .playbackRate
 播放速率
 
 
->####parseFloat(string)
+>#### parseFloat(string)
 
 可解析一個字符串，並返回一個浮點數。
 該函數指定字符串中的首個字符是否是數字。如果是，則對字符串進行解析，直到到達數字的末端為止，然後以數字返回該數字，而不是作為字符串。
 
->####.flexBasis
+>#### .flexBasis
 
 定義活動式項目的初始
 
-##Key Sequence Detection (KONAMI CODE)
+## Key Sequence Detection (KONAMI CODE)
 
 2019/07/09
 
->####.join()
+>#### .join()
 
     var fruits = ["Banana", "Orange", "Apple", "Mango"];
     var energy1 = fruits.join();//Banana,Orange,Apple,Mango
     var energy2 = fruits.join(" and ");//Banana and Orange and Apple and Mango
 
 
-##Slide In on Scroll
+## Slide In on Scroll
 
 2019/07/10
->####.offsetTop
+>#### .offsetTop
 容器內相對於高度的位移量
 
->####window.scrollY
+>#### window.scrollY
 滾輪Y軸位移量
 
->####window.innerHeight
+>#### window.innerHeight
 視窗高度
 
 Object and Arrays - Reference VS Copy
