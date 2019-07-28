@@ -1,0 +1,20 @@
+# git note
+
+git init:初始化專案資料夾，建立.git資料
+git status：確認狀態
+git add . ：將檔案加入追蹤
+git commit -m "輸入"：建立一個新的版本， -m 再輸入處加入註記
+git branch：確認專案分支(master為主要分支)
+git remote -v：查詢遠端的Repository
+git remote add 遠端空間名稱 網址：新增遠端位置
+git push：上傳
+
+cd/cd：切換目錄
+cd/pwd取得目前所在的位置
+dir/ls：列出目前的檔案列表
+mkdir/mkdir：建立新的目錄
+無/touch：建立檔案
+copy/cp：複製檔案
+move/mv：移動檔案
+del/rm：刪除檔案
+cls/clear：清除畫面上的內容
