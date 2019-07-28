@@ -120,10 +120,10 @@ speed可以取以下值："slow"、"fast" 或毫秒。
 >### [.on()](https://www.cnblogs.com/sqh17/p/7746418.html)
 
 與`addEvenListener()`相同功能
-有動態事件觸發的功能
+[有動態事件觸發的功能](http://skaih.logdown.com/posts/712464-jquery-click-on-the-where-different)
 
     $(selector).on(event,function);
-    [$(selector).on(event,childSelector,data,function);](http://skaih.logdown.com/posts/712464-jquery-click-on-the-where-different)
+    $(selector).on(event,childSelector,data,function);
 
 >### .append()
 
