@@ -1,0 +1,33 @@
+nav{
+  display: flex;
+  background:#8e8e8e;
+  height:50px;
+  justify-content: center;
+
+}
+.a{
+flex: none;
+background: red;
+margin: 10px;
+
+}
+.b{
+  background: red;
+  margin: 10px;
+}
+.c{
+  background: red;
+  margin: 10px;
+}
+main{
+  display: flex;
+}
+.d{
+
+}
+.e{
+
+}
+.f{
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="app">
+
+    <ul>
+      <li :val="commits">{{commits.name}}</li>
+    </ul>
+  </div>
+
+  <script src="/lib/vue.js"></script>
+  <script>
+    var apiURL = "https://api.github.com/users/SamLin1122/repos"
+    var app = new Vue({
+      el: ".app",
+      data: {
+        branches: ["master", "dev"],
+        currentBranch: "master",
+        commits: null
+      },
+      created: function () {
+        this.fetchData()
+      },
+      methods: {
+        fetchData: function () {
+          var xhr = new XMLHttpRequest()
+          var self = this
+          xhr.open("get",apiURL)
+          xhr.onload = function () {
+            self.commits = JSON.parse(xhr.responseText)
+          }
+          xhr.send()
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

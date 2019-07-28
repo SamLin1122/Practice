@@ -1,0 +1,18 @@
+textarea{
+  resize: none;
+
+}
+body {
+  background: #e9e9;
+  width: 400px;
+line-height: 25px;
+}
+fieldset{
+  margin: 20px ;
+  padding:20px;
+border-radius: 30px;
+}
+legend{
+  text-align: center;
+  font-size: 50px;
+}

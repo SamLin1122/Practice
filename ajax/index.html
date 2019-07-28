@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="register">
+    帳號:
+    <input type="text" class="account"><br>
+    密碼:
+    <input type="password" class="password"><br>
+    <input type="button" class="send" value="送出">
+  </div>
+  <div class="signin">
+    帳號:
+    <input type="text" class="account"><br>
+    密碼:
+    <input type="password" class="password"><br>
+    <input type="button" class="send" value="送出">
+  </div>
+  <script>
+    var register = document.querySelector(".register .send");
+    register.addEventListener("click", Register, false);
+    var signin = document.querySelector(".signin .send");
+    signin.addEventListener("click", Signin, false);
+
+    function Register() {
+      var email = document.querySelector(".register .account").value;
+      var password = document.querySelector(".register .password").value;
+      var account = {};
+      account.email = email;
+      account.password = password;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("post", "https://hexschool-tutorial.herokuapp.com/api/signup", true);
+      xhr.setRequestHeader("Content-type", "application/json")
+      var data = JSON.stringify(account);
+      xhr.send(data)
+      xhr.onload = function () {
+        var callbackData = JSON.parse(xhr.responseText)
+        if (callbackData.success) {
+          alert(callbackData.message)
+        }
+        else {
+          alert(callbackData.message)
+        }
+      }
+    }
+    function Signin() {
+      var email = document.querySelector(".signin .account").value
+      var password = document.querySelector(".signin .password").value
+      var account = {};
+      console.log(email)
+      account.email = email;
+      account.password = password;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("post", "https://hexschool-tutorial.herokuapp.com/api/signin", true);
+      xhr.setRequestHeader("Content-type", "application/json")
+      var data = JSON.stringify(account);
+      console.log(data)
+      xhr.send(data)
+      xhr.onload = function () {
+        var callbackData = JSON.parse(xhr.responseText)
+        if (callbackData.success) {
+          alert(callbackData.message)
+        }
+        else {
+          alert(callbackData.message)
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

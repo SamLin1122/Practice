@@ -1,0 +1,65 @@
+body{
+  margin:0;
+  font-family: "微軟正黑體";
+  font-size: 20px;
+  background: url(http://www.fruitseafood.com.tw/upload/20181024013232.jpg) no-repeat fixed center top;
+}
+div{
+  width: 600px;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  border-radius: 30px;
+  padding: 5px 30px;
+  box-shadow: 10px 10px 20px rgb(22, 21, 20);
+  background-color: rgba(247, 184, 12, 0.397);
+}
+p{
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow:
+-0.1px -0.1px 0 #000,
+0.1px -0.1px 0 #000,
+-0.1px 0.1px 0 #000,
+0.1px 0.1px 0 #000,
+0.2px 0.2px 2px black;
+}
+h2{
+  font-size: 34px;
+  font-weight: bold;
+  color: orange;
+  background:none;
+  text-shadow:
+-1px -1px 0 #000,
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000,
+2px 2px 2px black;
+}
+h3{
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  text-align:center;
+  padding: 10px 0 10px 0;
+}
+li{
+  font-family: "calibri","微軟正黑體";
+  font-size: 25px;
+}
+h1{
+  display: inline-block;
+  color: #ffffff;
+	padding: 15px 20px;
+  margin: auto;
+  font-size: 30px;
+}
+nav {
+	background-color: black;
+padding: 20px 0 30px 20px;
+}
+
+nav img {
+  float: left;
+  margin: 0;
+} 

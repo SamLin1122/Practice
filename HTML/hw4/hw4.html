@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="hw4.css">
+  <title>hw4</title>
+</head>
+
+<body>
+  <form action="hw4.php" method="get">
+    <fieldset>
+      <legend>拍賣網</legend>
+      商品名稱:
+      <input type="text" name="Product name">
+      <br>
+      價格:
+      <input type="text" name="Price">
+      <br>
+      是否免運費:
+      <input type="checkbox" name="free shipping" value="yes">是
+      <input type="checkbox" name="free shipping" value="no">否
+      <br>
+      性別:
+      <input type="radio" name="Sex" value="Male">男
+      <input type="radio" name="Sex" value="Female">女
+      <br>
+      類別:
+      <select name="type">
+        <option value="Cloths">上衣類</option>
+        <option value="Jacket">外套類</option>
+        <option value="Pants">下身類</option>
+        <option value="Accessories">飾品類</option>
+      </select>
+      <br>
+      商品備註:
+      <br>
+      <textarea name="Description" cols="50" rows="10">
+
+      </textarea>
+      <br>
+      <input type="submit" value="送出">
+    </fieldset>
+  </form>
+</body>
+
+</html>
