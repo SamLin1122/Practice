@@ -149,7 +149,7 @@ JavsScript語法
 
 在實際應用中，前者的做法會很方便帶參數進去。
 
-## 04 - Array Cardio Day 1
+## 04 - [Array Cardio Day 1](https://wcc723.github.io/javascript/2017/06/29/es6-native-array/)
 
 2019/07/04
 
@@ -293,7 +293,7 @@ Regular Expression
     [0-9] //-如果不是在開頭,就算是範圍不是字元.
     [^0-5]{3}//此時^為反向的意思.ex:選擇三個字元內有0-5以外的 
     
-## 07 - Array Cardio Day 2
+## 07 - [Array Cardio Day 2](https://wcc723.github.io/javascript/2017/06/29/es6-native-array/)
 2019/07/07
 
 >### .every()
@@ -428,7 +428,7 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
 ## 09 - Dev Tools Tricks
 2019/07/08
 
->### console
+>### [console](http://www.runoob.com/jsref/obj-console.html)
 
     console.log()
     console.dir()//顯示屬性
