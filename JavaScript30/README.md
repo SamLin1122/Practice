@@ -1,10 +1,10 @@
 #  JavaScript 30
 
-## JavaScript Drum Kit
 
+## 01 - JavaScript Drum Kit
 2018/07/03
 
->#### 箭頭函式 (Arrow Function)
+>### 箭頭函式 (Arrow Function)
 
     //傳統寫法
     var func1 = function(e) { console.log('Hi, ' + e); };
@@ -13,22 +13,22 @@
     //補充:如果該function沒有參數要傳，要帶空括號如下
     var func3 = () => console.log('Hi');
 
->#### transitionend
+>### transitionend
 
     addEventLisenter("transitionend",function(){}) 
     //transitionend為其中一項事件
->#### audio
+>### audio
 
-##### HTML語法
+#### HTML語法
 
     <audio src=””></audio>
->#### audio.play()
+>### audio.play()
 
-##### JavaScript語法
+#### JavaScript語法
 
     element.play()//進行播放
     element.currentTime//指定播放間隔秒數
->#### template (``,${})
+>### template (``,${})
 
 用``包住字串，利用`${}`來包變數
 
@@ -40,7 +40,7 @@
     var str = `<div data-key="${key}">
              <button>click me</button>
              </div>`;
->#### Array.from
+>### Array.from
 
 
     //Array.from 是一個將一個物件或是字串轉為陣列格式的語法
@@ -59,24 +59,24 @@ nodeList很像陣列，但無`array.prototype`上的方法。
     testArray.push('add'); // <-- 轉為陣列就可以了
 
 -----------------------------------------------
-## CSS + JS CLOCK
+## 02 - CSS + JS CLOCK
 
 2018/07/04
 
->#### transform
+>### transform
 
     transform-origin: 100%;//將原點轉移到最右邊
     transform: rotate(90deg);
 
->##### transform-origin
+>#### transform-origin
 變形的軸心，預設為物件的中心點，
 在這個範例中，設定為100%(right)可以使其從時鐘面的中心點開始旋轉。
 
->##### transform:rotate()
+>#### transform:rotate()
 旋轉物件，數值後方要加上角度`deg`，
 可超過360度，正值為順時針轉，負值為逆時針旋轉。
 
->##### transition
+>#### transition
     transition: all 0.05s;//轉場畫面的位置與秒數
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 
@@ -99,7 +99,7 @@ nodeList很像陣列，但無`array.prototype`上的方法。
 | cubic-bezier（n，n，n，n） | 在cubic-bezier 函數中定義自己的值。可能的值是0 至1 之間的數值。                    |
 
 
->#### Date()
+>### Date()
 
 JavaScript語法
 時間函式，需搭配new來取得時間函數
@@ -111,7 +111,7 @@ JavaScript語法
     var seconds = now.getSeconds();//用get擷取Date中的seconds
 
 
->#### setInterval
+>### setInterval
 
 JavsScript語法
 定時器，有兩個參數`setInterval(function, time)`
@@ -123,23 +123,23 @@ JavsScript語法
     seconds
 
 ----------
-## CSS-Variables
+## 03 - CSS Variables
 
 2018/07/04
 
->#### :root
+>### :root
 
 `:root` 選擇器匹配文檔根元素。
 在HTML 中，根元素始終是html 元素。
 
->#### dataset
+>### dataset
 
 用`dataset`可以取出對象的`data-*`屬性，也等同於`getAttribute`
 
     <div id="test" data-no="123"></div>
     document.querySelector("# test").dataset.no // 輸出123
     document.querySelector("# test").getAttribute("data-no"); // 輸出123
->#### style.setProperty()
+>### style.setProperty()
 
 等同於style.PropertyName
 
@@ -149,12 +149,12 @@ JavsScript語法
 
 在實際應用中，前者的做法會很方便帶參數進去。
 
-## Array-Cardio-Day-1
+## 04 - Array Cardio Day 1
 
 2019/07/04
 
 
->#### Array.filter()
+>### Array.filter()
 
 filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，很適合用在搜尋符合條件的資料。
 
@@ -167,7 +167,7 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
         }
 
 
->#### Array.map()
+>### Array.map()
 
 使用 map() 時他需要回傳一個值，他會透過函式內所回傳的值組合成一個陣列。
 
@@ -202,14 +202,14 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
       }
     });
     console.log(mapEat);          // ["鍋燒意麵 好吃", "炒麵 好吃", "蘿蔔泥 不好吃", "蘿蔔泥 不好吃"]
->#### Array.sort()
+>### Array.sort()
 
 更改陣列順序
 
     var birthdate = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
 
 
->#### Array.reduce()
+>### Array.reduce()
 
     //Array.reduce(total,value,index, array)
     var live = inventors.reduce((total, inventor) => { return total + (inventor.passed - inventor.year) }, 0);//0為設定total的起始值
@@ -228,7 +228,7 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
 首先
 接著做一個判斷來決定建立物件內容或著使已建立內容累加總數!
 
->#### .split
+>### .split
 
 將陣列中以某個字元為基準切開
 
@@ -240,11 +240,10 @@ filter() 會回傳一個陣列，其條件是 return 後方為 true 的物件，
     })
 
 
-## Flex Panels Image Gallery
-
+## 04 - Flex Panels Gallery
 2019/07/04
 
->#### Flex()
+>### Flex()
 
 display: flex
 把該容器設定為flex模式，容器內的子元素都成為一個flex
@@ -263,12 +262,10 @@ includes()
         }
     }
 
-
-## Ajax Type Ahead(未學)
-
+## 06 - Type Ahead(?)
 2019/07/05
 
->#### RegExp()
+>### RegExp()
 
 Regular Expression
 
@@ -295,11 +292,11 @@ Regular Expression
     [] //符合[]內的任意一個選項. [abd]等於a or b or d
     [0-9] //-如果不是在開頭,就算是範圍不是字元.
     [^0-5]{3}//此時^為反向的意思.ex:選擇三個字元內有0-5以外的 
-## Array Cardio Day 2
-
+    
+## 07 - Array Cardio Day 2
 2019/07/07
 
->#### .every()
+>### .every()
 
 every() 可以檢查所有的陣列是否符合條件，這僅會回傳一個值 true or false，可以用來檢查陣列中的內容是否符合特定條件。every() 需完全符合
 
@@ -308,7 +305,7 @@ every() 可以檢查所有的陣列是否符合條件，這僅會回傳一個值
       return item.age > 10 });// false: 只要有部分不符合，則為 false
     var ans2 = array.every(function(item, index, array){
       return item.age < 25 });// true: 全部 age 都小於 25
->#### .some()
+>### .some()
 
 some() 與 every() 非常接近，都是回傳 true or false，差異僅在 every() 需完全符合，some() 僅需要部分符合。
 
@@ -323,8 +320,7 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
       return item.age > 25
     });// false: 全部都不符合則為 false
 
-
->#### .splice()
+>### .splice()
 
     //Array.splice(index,howmany,item1,...,itemN)
     var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -334,7 +330,8 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
     animals.splice(1, 0,"dog");//output:['ant',"dog",'bison', 'camel', 'duck', 'elephant']
     animals.splice(1, 2,"dog","cat");//output:['ant',"dog","cat", 'duck', 'elephant']
     animals.splice(1, 3,"dog");//output:['ant',"dog", 'elephant']
->#### .slice()
+    
+>### .slice()
 
 `slice()` 方法會回傳一個新陣列物件，為原陣列選擇之 `begin` 至 `end`（不含 `end`）部分的淺拷貝（shallow copy）。而原本的陣列將不會被修改。
 `slice()`若沒指定開始與結束位置則複製原陣列
@@ -344,7 +341,8 @@ some() 與 every() 非常接近，都是回傳 true or false，差異僅在 ever
     animals.slice(2);//output:["camel", "duck", "elephant"]
     animals.slice(2, 4);//output:["camel", "duck"]
     animals.slice(1, 5);//output:["bison", "camel", "duck", "elephant"]
->#### .find
+    
+>### .find
 
 find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次為 true 的值。
 
@@ -360,18 +358,18 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     });
     console.log(findLike);           // 雖然答案有兩個，但只會回傳第一個 Bobo 物件
 
->#### .findIndex() 
+>### .findIndex() 
 
 與find() 很像，但是是回傳index的位置。
 
     var index = comments.findIndex(comment => comment.id === 823423);
 
 
-## Fun with HTML5 Canvas
+## 08 - Fun with HTML5 Canvas
 
 2019/07/07
 
->#### Canvas
+>### Canvas
 
 `CanvasRenderingContext2D.canvas` 屬性是 Canvas API 的一部分，是對與給定上下文關聯的`HTMLCanvasElement`對象的只讀引用。如果没有 `<canvas>` 元素與之對應，對象值為`null`。
 
@@ -382,7 +380,7 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     ctx.canvas // HTMLCanvasElement
->#### .lineJoin()
+>### .lineJoin()
 
 轉折處的樣式,`miter`為預設.
 
@@ -392,7 +390,7 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
 2. “bevel"三角形為底 
 3. "miter”菱形為底
 
->#### .lineCap()
+>### .lineCap()
 
 起始與結尾的樣式,`butt`為預設.
 
@@ -402,37 +400,35 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
 2. ”round”圓形 
 3.”square”方形
 
->#### 畫線設置
+>### 畫線設置
 
     //畫線設置
     ctx.beginPath();//設置一個新的路徑
     ctx.moveTo(50,50);//將一個新的子路徑的起始點移動到(x,y)坐標的方法
     ctx.lineTo(200, 50);//使用直線連接子路徑的終點到(x,y)座標的方法(但不會畫線)
     ctx.stroke();//繪製當前或已經存在的路徑的方法
->#### .strokeStyle
+>### .strokeStyle
 
     ctx.strokeStyle = color;
     ctx.strokeStyle = gradient;
     ctx.strokeStyle = pattern;
->#### hsl
+>### hsl
 
     hsl(hue(色調deg), saturation(飽和度%), lightness(亮度%))
 
-##### hue
+#### hue
 為調色盤上的角度,範圍為0-360. 0為紅色, 120為綠色, 240為藍色.
 
-##### saturation
+#### saturation
 用百分比%表示. 0%為灰階, 100%為全彩.
 
-##### lightness
+#### lightness
 用百分比%表示. 0%為黑色, 100%為白色.
 
-
-## 14 Must Know Dev Tools Tricks
-
+## 09 - Dev Tools Tricks
 2019/07/08
 
->#### console
+>### console
 
     console.log()
     console.dir()//顯示屬性
@@ -452,94 +448,92 @@ find() 與 filter() 很像，但 find() 只會回傳一次值，且是第一次�
     console.time()//計時器，開始計時間，與timeEnd()一起使用，用於算出一個操作所花費的準確時間。
     console.timeEnd()//計時結束
     console.table()//以表格方式顯示數據
-## Hold Shift to Check Multiple Checkboxes
-
+    
+## 10 - Hold Shift to Check Multiple Checkboxes
 2019/07/08
 
->#### .shiftKey
+>### .shiftKey
 
 偵測shiftKey是否使用中, 然後回傳true or false
 
->#### .checked
+>### .checked
 
 偵測checkbox是否被選取, 然後回傳true or fals
 
-## Custom HTML5 Video Player
+## 11 - Custom HTML5 Video Player
 
 2019/07/08
 
->#### video
+>### video
 
-##### .play
+#### .play
 播放
 
-##### .pause
+#### .pause
 暫停
 
-##### .paused 
+#### .paused 
 video暫停時為true 播放時為 false
 
-##### .currentTime
+#### .currentTime
 正在播放的時間點
 
-##### .duration
+#### .duration
 影片總長
 
-##### .volume
+#### .volume
 聲音
 
-##### .playbackRate
+#### .playbackRate
 播放速率
 
 
->#### parseFloat(string)
+>### parseFloat(string)
 
 可解析一個字符串，並返回一個浮點數。
 該函數指定字符串中的首個字符是否是數字。如果是，則對字符串進行解析，直到到達數字的末端為止，然後以數字返回該數字，而不是作為字符串。
 
->#### .flexBasis
+>### .flexBasis
 
 定義活動式項目的初始
 
-## Key Sequence Detection (KONAMI CODE)
-
+## 12 - Key Sequence Detection
 2019/07/09
 
->#### .join()
+>### .join()
 
     var fruits = ["Banana", "Orange", "Apple", "Mango"];
     var energy1 = fruits.join();//Banana,Orange,Apple,Mango
     var energy2 = fruits.join(" and ");//Banana and Orange and Apple and Mango
 
-
-## Slide In on Scroll
-
+## 13 - Slide In on Scroll
 2019/07/10
->#### .offsetTop
+
+>### .offsetTop
 容器內相對於高度的位移量
 
->#### window.scrollY
+>### window.scrollY
 滾輪Y軸位移量
 
->#### window.innerHeight
+>### window.innerHeight
 視窗高度
 
-Object and Arrays - Reference VS Copy
-
+## 14 -  JavaScript References VS Copying
 2019/07/10
 
 
-陣列的複製
+>### 陣列的複製
 
 為了避免Call by refrence時會去異動到原本的陣列，就要先把原本的陣列做一次複製，有以下幾種方法：
 
-Array.prototype.Slice()
+>### Array.prototype.Slice()
+
     var arr = ['a', 'b'];
     var arr2 = arr.slice();
     console.log(arr, arr2);// ['a', 'b'] ['a', 'b']
     arr2[1] = 'c';
     console.log(arr, arr2);// ['a', 'b'] ['a', 'c']
-Array.prototype.concat() 
+>### Array.prototype.concat() 
 
 使用`concat()`可以合併陣列，所以如果使用空陣列來合併原陣列，
 也會達到複製整個陣列的效果：
@@ -556,7 +550,7 @@ Array.prototype.concat()
     var str1 = "Hello ";
     var str2 = "world!";
     var n = str1.concat(str2);//Hello world!
-Spread syntax …
+>### Spread syntax …
 
 ES6的`Spread`語法，複製方法如下：
 
@@ -565,7 +559,7 @@ ES6的`Spread`語法，複製方法如下：
     console.log(arr, arr2);// ['a', 'b'] ['a', 'b']
     arr2[1] = 'c';
     console.log(arr, arr2);// ['a', 'b'] ['a', 'c']
-Array.from() 
+>### Array.from() 
 
 同為ES6的`Array.from()`也可以快速達到複製的效果：
 註：`Array.from()`可將物件複製後轉換為陣列
@@ -575,11 +569,11 @@ Array.from()
     console.log(arr, arr2);// ['a', 'b'] ['a', 'b']
     arr2[1] = 'c';
     console.log(arr, arr2);// ['a', 'b'] ['a', 'c']
-物件的複製
+>### 物件的複製
 
 物件也會有call by refrence的特性，所以與陣列相同，方法如下：
 
-Object.assign() 
+>### Object.assign() 
 
 使用`Object.assign()`來做，指定一個空的物件並把目標對象塞進去：
 
@@ -601,7 +595,7 @@ Object.assign()
     }
     const cloneA = cloneDeep(test);
     const cloneB = cloneDeep(test);
-JSON.parse * JSON.stringify
+>### JSON.parse * JSON.stringify
 
 利用`JSON.parse * JSON.stringify`來把目標對象作轉換賦值的動作， 不論目標對象是什麼型別，都可用來做複製：
 JSON.stringify：將JavaScript值(通常為對象或陣列)轉為字串
@@ -622,16 +616,16 @@ JSON.parse：將數據轉為JavaScript值(通常為對象或陣列)
     console.log(obj, obj2);// { a: 1, b: 3 } { a: 1, b: 3 }
 
 
-LocalStorage(未學會)
-CSS Text Shadow Mouse Move Effect
+## 15 - LocalStorage(!)
 
+## 16 - Mouse Move Shadow
 2019/07/10
 
-.X .Y & .offsetX .offsetY
+>### .X .Y & .offsetX .offsetY
 
 .X .Y為視窗之XY座標值，.offsetX.offsetY為容器內的XY座標值
 
-Math.round()
+>### Math.round()
 
 取整數
 
@@ -643,11 +637,11 @@ Math.round()
     var{ offsetHeight: height } = hero;
     // 下面這段等同於 var x = e.offsetX;
     var{ offsetX: x } = e;
-Sorting Band Names without articles
 
+## 17 - Sort Without Articles
 2019/07/11
 
-RegExp()
+>### RegExp()
 
 i：不分大小寫
 
@@ -666,19 +660,19 @@ i：不分大小寫
 
     var str = "       Runoob        ";
     alert(str.trim());//Runoob
-Tally String Times with Reduce
-
+    
+## 18 - Adding Up Times with Reduce
 2019/07/11
 
 
-data
+>### data
 
 在`querySelector`中使用`[data-element]`呼叫，若要使用`element`之內容用`.dataset.element`
 
-    var timesArray = Array.from(document.querySelectorAll("[data-time]"))
+    var timesArray = >### Array.from(document.querySelectorAll("[data-time]"))
     var seconds = timesArray
           .map(a => a.dataset.time)
-.map(parseFloat)
+>### .map(parseFloat)
 
 從map中即將輸出的字串轉換為數字。
 
@@ -688,7 +682,7 @@ data
           //     return parseFloat(str);}
     });
 
-數學式
+>### 數學式
 parseInt()無條件捨去
 Math.ceil()無條件進位
 Math.round()四捨五入
@@ -698,39 +692,42 @@ Math.floor()無條件捨去
     function getResult(num,n){
     return Math.round(num*Math.pow(10,n))/Math.pow(10,n);
     
-Unreal Webcam Fun(未學會)
+## 19 - Webcam Fun(?)
 
+## 20 - Speech Detection(?)
 
-Speech Detection(未學會)
-Geolocation
-Follow Along Link Highlight
+## 21 - Geolocation(?)
 
+## 22 - Follow Along Link Highlight
 2019/07/11
 
-mouseover VS mouseenter
+>### mouseover VS mouseenter
+
 - `mouseover`：會冒泡，當項目的子項目被指到時也會驅動。
 - `mouseenter`：不會冒泡，也就是說當指針從它的子層物理空間移到它的物理空間上時不會觸發
-mouseout VS mouseleave
+>### mouseout VS mouseleave
+
 - `mouseout`：會冒泡，當指針離開元素或離開元素的後代（or）（即使指針仍在元素內）時，會觸發`mouseout`。
 - `mouseleave`：不會冒泡，當指針離開元素及其所有後代時（and），會觸發`mouseleave`。
 
-結論：
+>### 結論：
 mouseenter：當鼠標移入某元素時觸發。
 mouseleave：當鼠標移出某元素時觸發。
 mouseover：當鼠標移入某元素時觸發，移入和移出其子元素時也會觸發。
 mouseout：當鼠標移出某元素時觸發，移入和移出其子元素時也會觸發。
 
-appendChild()
+>### appendChild()
 
 方法可向節點的子節點列表的末尾添加新的子節點。
 
-getBoundingClientRect()
+>### getBoundingClientRect()
 
 回傳`DOMRect物件`可以取得當前項目的位置資料。
 `DOMRect` 對象包含了一組用於描述邊框的唯讀屬性：x、y、left、top、right和bottom。除了 width 和 height 外的值都是相對於左上角位置。
 
-![getBoundingClientRect示例圖](https://mdn.mozillademos.org/files/15087/rect.png)
+![](https://mdn.mozillademos.org/files/15087/rect.png)
+getBoundingClientRect示例圖
 
-translate(x, y)
+>### translate(x, y)
      highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
     //translate(x, y):從原本項目移動x,y距離。
