@@ -1,10 +1,10 @@
-#JavaScript 30
+# JavaScript 30
 
-##JavaScript Drum Kit
+## JavaScript Drum Kit
 
 2018/07/03
 
->####箭頭函式 (Arrow Function)
+>#### 箭頭函式 (Arrow Function)
 
     //傳統寫法
     var func1 = function(e) { console.log('Hi, ' + e); };
