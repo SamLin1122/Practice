@@ -726,6 +726,7 @@ mouseout：當鼠標移出某元素時觸發，移入和移出其子元素時也
 `DOMRect` 對象包含了一組用於描述邊框的唯讀屬性：x、y、left、top、right和bottom。除了 width 和 height 外的值都是相對於左上角位置。
 
 ![](https://mdn.mozillademos.org/files/15087/rect.png)
+
 getBoundingClientRect示例圖
 
 >### translate(x, y)
