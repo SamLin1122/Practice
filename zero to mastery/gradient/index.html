@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    :root {
+      --c1: #33ff99;
+      --c2: #ff3344;
+    }
+
+    body {
+      text-align: center;
+      transition: all 3;
+      background: linear-gradient(to right bottom, var(--c1), var(--c2));
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Linear Gradient</h1>
+  <input class="cl1" type="color" value="#33ff99">
+  <input class="cl2" type="color" value="#ff3344"><br>
+  <input class="btn" type="button" value="Random">
+  <input class="auto" type="button" value="Auto mode">
+
+  <script>
+    var c1 = document.querySelector(".cl1")
+    var c2 = document.querySelector(".cl2")
+    c1.addEventListener("change", colorChange)
+    c2.addEventListener("change", colorChange)
+    function colorChange() {
+      document.documentElement.style.setProperty('--c1', c1.value);
+      document.documentElement.style.setProperty('--c2', c2.value);
+
+    }
+
+    var btn = document.querySelector(".btn")
+    btn.addEventListener("click", randomColor)
+
+    function randomString(len, charSet) {
+      var randomString = '';
+      for (var i = 0; i < len; i++) {
+        var randomPoz = Math.round(Math.random() * charSet.length);
+        if (randomPoz == 16) {
+          randomString += charSet.substring(randomPoz - 1, randomPoz);
+        }
+        else {
+          randomString += charSet.substring(randomPoz, randomPoz + 1);
+        }
+      }
+      return randomString;
+    }
+    function randomColor() {
+      var randomValue1 = randomString(6, '1234567890abcdef');
+      var randomValue2 = randomString(6, '1234567890abcdef');
+      c1.value = `#${randomValue1}`
+      c2.value = `#${randomValue2}`
+      colorChange()
+    }
+
+
+    var auto = document.querySelector(".auto")
+    auto.addEventListener("click", timer)
+    
+    function timer() {
+      setInterval(r, 150)
+      setInterval(g, 130)
+      setInterval(b, 100)
+      if (auto.value == "Stop Auto Mode") {
+        auto.value = "Auto Mode"
+        clearInterval(timer)
+      }
+      else {
+        setInterval(color, 100)
+        auto.value = "Stop Auto Mode"
+      }
+    }
+
+    var i = 0
+    var j = 5
+    var k = 13
+    var a = true
+    var d = false
+    var c = true
+    var rgb = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
+    function color() {
+      c1.value = `#${rgb[i]}${rgb[j]}${rgb[k]}${rgb[i]}${rgb[j]}${rgb[k]}`
+      c2.value = `#${rgb[k]}${rgb[i]}${rgb[j]}${rgb[i]}${rgb[j]}${rgb[k]}`
+      colorChange()
+    }
+    function r() {
+      if (a) {
+        i++
+      }
+      else {
+        i--
+      }
+      if (a == true && i == 15) {
+        a = false
+      }
+      else if (a == false && i == 0) {
+        a = true
+      }
+    }
+    function g() {
+      if (d) {
+        j++
+      }
+      else {
+        j--
+      }
+      if (d == true && j == 15) {
+        d = false
+      }
+      else if (d == false && j == 0) {
+        d = true
+      }
+    }
+    function b() {
+      if (c) {
+        k++
+      }
+      else {
+        k--
+      }
+      if (c == true && k == 15) {
+        c = false
+      }
+      else if (c == false && k == 0) {
+        c = true
+      }
+    }
+  </script>
+</body>
+
+</html>
