@@ -17,11 +17,12 @@
       background: linear-gradient(to right bottom, #33ff99, #ff3344);
       height: 100vh;
     }
-    .btn,.auto{
-      margin-top: 20px;
-  width: 120px;
 
-}
+    .btn, .auto {
+      margin-top: 20px;
+      width: 120px;
+
+    }
   </style>
 </head>
 
@@ -37,11 +38,11 @@
     // --------------------colorpicker--------------------
     var c1 = document.querySelector(".cl1")
     var c2 = document.querySelector(".cl2")
-    var body=document.querySelector("body")
+    var body = document.querySelector("body")
     c1.addEventListener("change", colorChange)
     c2.addEventListener("change", colorChange)
     function colorChange() {
-      body.style.background=`linear-gradient(to right bottom,${c1.value},${c2.value})`
+      body.style.background = `linear-gradient(to right bottom,${c1.value},${c2.value})`
       // document.documentElement.style.setProperty('--c1', c1.value);
       // document.documentElement.style.setProperty('--c2', c2.value);
     }
