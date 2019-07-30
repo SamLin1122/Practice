@@ -7,17 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    :root {
+    /* :root {
       --c1: #33ff99;
       --c2: #ff3344;
-    }
+    } */
 
     body {
       text-align: center;
-      transition: all 3;
-      background: linear-gradient(to right bottom, var(--c1), var(--c2));
+      background: linear-gradient(to right bottom, #33ff99, #ff3344);
       height: 100vh;
     }
+    .btn,.auto{
+      margin-top: 20px;
+  width: 120px;
+
+}
   </style>
 </head>
 
@@ -26,19 +30,23 @@
   <input class="cl1" type="color" value="#33ff99">
   <input class="cl2" type="color" value="#ff3344"><br>
   <input class="btn" type="button" value="Random">
-  <input class="auto" type="button" value="Auto mode">
+  <input class="auto" type="button" value="Auto Mode">
 
   <script>
+
+    // --------------------colorpicker--------------------
     var c1 = document.querySelector(".cl1")
     var c2 = document.querySelector(".cl2")
+    var body=document.querySelector("body")
     c1.addEventListener("change", colorChange)
     c2.addEventListener("change", colorChange)
     function colorChange() {
-      document.documentElement.style.setProperty('--c1', c1.value);
-      document.documentElement.style.setProperty('--c2', c2.value);
-
+      body.style.background=`linear-gradient(to right bottom,${c1.value},${c2.value})`
+      // document.documentElement.style.setProperty('--c1', c1.value);
+      // document.documentElement.style.setProperty('--c2', c2.value);
     }
 
+    // --------------------Randomcolor--------------------
     var btn = document.querySelector(".btn")
     btn.addEventListener("click", randomColor)
 
@@ -63,24 +71,33 @@
       colorChange()
     }
 
-
+    // --------------------AutoRandomcolor--------------------
     var auto = document.querySelector(".auto")
-    auto.addEventListener("click", timer)
-    
-    function timer() {
-      setInterval(r, 150)
-      setInterval(g, 130)
-      setInterval(b, 100)
+    var qq
+    var s = 100
+
+    auto.addEventListener("click", autoMode)
+    function autoMode() {
       if (auto.value == "Stop Auto Mode") {
+        clearInterval(qq)
         auto.value = "Auto Mode"
-        clearInterval(timer)
       }
       else {
-        setInterval(color, 100)
         auto.value = "Stop Auto Mode"
+        qq = setInterval(color, s)
       }
     }
 
+    setInterval(r, s)
+    setInterval(g, s * 2)
+    setInterval(b, s * 1.5)
+
+
+    function color() {
+      c1.value = `#${rgb[i]}${rgb[j]}${rgb[j]}${rgb[k]}${rgb[k]}${rgb[i]}`
+      c2.value = `#${rgb[j]}${rgb[i]}${rgb[k]}${rgb[j]}${rgb[i]}${rgb[k]}`
+      colorChange()
+    }
     var i = 0
     var j = 5
     var k = 13
@@ -88,51 +105,47 @@
     var d = false
     var c = true
     var rgb = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"]
-    function color() {
-      c1.value = `#${rgb[i]}${rgb[j]}${rgb[k]}${rgb[i]}${rgb[j]}${rgb[k]}`
-      c2.value = `#${rgb[k]}${rgb[i]}${rgb[j]}${rgb[i]}${rgb[j]}${rgb[k]}`
-      colorChange()
-    }
+
     function r() {
       if (a) {
         i++
+        if (i == 15) {
+          a = false
+        }
       }
-      else {
+      else if (!a) {
         i--
-      }
-      if (a == true && i == 15) {
-        a = false
-      }
-      else if (a == false && i == 0) {
-        a = true
+        if (i == 0) {
+          a = true
+        }
       }
     }
     function g() {
       if (d) {
         j++
+        if (j == 15) {
+          d = false
+        }
       }
-      else {
+      else if (!d) {
         j--
-      }
-      if (d == true && j == 15) {
-        d = false
-      }
-      else if (d == false && j == 0) {
-        d = true
+        if (j == 0) {
+          d = true
+        }
       }
     }
     function b() {
       if (c) {
         k++
+        if (k == 15) {
+          c = false
+        }
       }
-      else {
+      else if (!c) {
         k--
-      }
-      if (c == true && k == 15) {
-        c = false
-      }
-      else if (c == false && k == 0) {
-        c = true
+        if (k == 0) {
+          c = true
+        }
       }
     }
   </script>
