@@ -40,3 +40,20 @@ expression
 .push()：在陣列插入項目
 
 .concat([])：在陣列中加入陣列後產生一個新的陣列,並不會改變原本陣列
+
+>### [setInterval() 和 clearInterval()](http://www.runoob.com/jsref/met-win-setinterval.html)
+    function move() {
+    var elem = document.getElementById("myBar"); 
+    var width = 0;
+    var id = setInterval(frame, 10);
+        function frame() {
+            if (width == 100) {
+                clearInterval(id);
+            } 
+            else {
+                width++; 
+                elem.style.width = width + '%'; 
+            }
+        }
+    }
+
