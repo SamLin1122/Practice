@@ -3,19 +3,19 @@
 >### CSS Grid
 
     .container{
-    gird-gap:
-    grid-template-columns: 1fr 1fr 2fr 
-    grid-template-row:repeat(3,1fr) or repeat(auto-fill,minmax(200px,1fr))
-    justify-items:
-    align-items:
-    }
+        gird-gap:
+        grid-template-columns: 1fr 1fr 2fr 
+        grid-template-row:repeat(3,1fr) or repeat(auto-fill,minmax(200px,1fr))
+        justify-items:
+        align-items:
+        }
     
     .item{
-    grid-colimn:spam 2
-    grid-row:1/4
-    justify-self:
-    align-self:
-    }
+        grid-colimn:spam 2
+        grid-row:1/4
+        justify-self:
+        align-self:
+        }
 
 
 >### function
@@ -23,10 +23,10 @@ function 宣告 declaration
 `function Hello(){}`
 
 function 表達式 expression
-`var abc=function(){}`
+`var abc = function(){}`
 
 expression
-`var `
+`var a = 1 `
 
 >### function vs method
     thisisafunction()
@@ -37,7 +37,7 @@ expression
 
 .pop()：移除陣列最後一個
 
-.push()：在陣列插入項目
+.push()：在陣列最後面插入項目
 
 .concat([])：在陣列中加入陣列後產生一個新的陣列,並不會改變原本陣列
 
@@ -94,8 +94,9 @@ expression
 
 陣列複製後產生新的陣列
     let a=[1,2,3,4]
-    let b=[].concat([a])// 宣告b為空陣列以及加入a陣列
-
+    let b=[].concat([a])// 宣告b為空陣列後加入a陣列
+    let c=[...a]
+    
 obj複製後產生新物件
     let obj={a:"A",b:"B",c:"C"}
     let clone1=Object.assign({},obj)
@@ -106,14 +107,14 @@ obj複製後產生新物件
 >### 平方
     const square=(x)=> x**2
 >### 次方
-    const cube=(y)=>y***3
+    const cube=(y)=>y**3
 ## ES8
 在開頭加入10個空白
     "hello".padstart(10)//"          hello"
 在結尾加入5個空白
     "hello".padend(5)//"hello     "
 
->### Object.values()  Object.entries
+#### Object.values()  Object.entries
 
     let obj={a:"A",b:"B",c:"C"}
     Object.values(obj).forEach(value=>console.log(value))
@@ -164,3 +165,9 @@ obj複製後產生新物件
     //3
     //4
     //5
+    for(item in basket){
+    console.log(item)
+    }
+    //0
+    //1
+    //2
